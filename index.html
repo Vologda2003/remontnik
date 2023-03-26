@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Главная</title>
+	<link rel="stylesheet" href="./assets/styles/style.css">
+</head>
+<body>
+	<div class="wrapper">
+		<div class="top">
+			<nav class="navigation">
+				<ul class="navigation__list">
+					<li class="button navigation__item"><a href="index.html" class="navigation__link">Главная</a></li>
+					<li class="button navigation__item"><a href="advantages.html" class="navigation__link">Преимущества</a></li>
+					<li class="button navigation__item"><a href="question.html" class="navigation__link">Задать вопрос</a></li>
+					<li class="button navigation__item"><a href="form.html" class="navigation__link">Вызвать мастера</a></li>
+					<li class="button navigation__item"><a href="price.php" class="navigation__link">Цены</a></li>
+				</ul>
+			</nav>
+			<div class="container">
+				<div class="clock"><span class="hours">16</span>:<span class="minutes">38</span>:<span class="seconds">44</span></div>
+				<header class="header">
+					<a href="#" class="logo"><img src="./assets/images/logo.png" alt="logo" class="logo__image"></a>
+					<div>
+						<div class="label">Круглосуточно, без выходных</div>
+						<div class="number white-text">+7-908-799-00-97</div>
+					</div>
+				</header>
+				<main class="main">
+					<div class="main__core">
+						<div class="white-text">Ремонт компьютеров в Омске</div>
+						<a href="form.html" class="button">Починим вас за 20 минут</a>
+					</div>
+					<div class="some-some">
+						<img src="./assets/images/computer.jpg" alt="computer" class="main__image">
+					</div>
+				</main>
+			</div>
+		</div>
+		<footer class="container footer">
+			<div>
+				<a href="https://t.me/remontnik"><img src="./assets/images/telegram.png" alt="telegram"></a>
+				<a href="https://vk.com/id.zuko" target="_blank"><img src="./assets/images/vk.png" alt="telegram"></a>
+			</div>
+			<span class="address">Адрес ул.Гагарина 10</span>
+		</footer>
+	</div>
+	<script>
+		setInterval(() => {
+
+			const date = new Date()
+
+			const zero = number => number < 10 ? `0${number}` : number
+
+			document.querySelector('.hours').innerHTML = zero(date.getHours())
+			document.querySelector('.minutes').innerHTML = zero(date.getMinutes())
+			document.querySelector('.seconds').innerHTML = zero(date.getSeconds())
+
+		}, 1000)
+	</script>
+</body>
+</html>
